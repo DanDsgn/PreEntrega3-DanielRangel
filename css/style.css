@@ -440,4 +440,26 @@
   object-fit: cover;
 }
 
+.conteiner-servicios {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.conteiner-servicios .img-nos {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+@media only screen and (max-width: 992px) {
+  .conteiner-servicios .img-nos {
+    height: 300px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .conteiner-servicios .img-nos {
+    height: 200px;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
