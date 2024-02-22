@@ -1,0 +1,22 @@
+.nav-color{
+    background-color: $dark_bg;
+    a:hover{
+        color: $primary-color ;
+    }
+    img {
+        width: 200px;
+    }
+}
+
+.offcanvas{
+    &-body{
+        background-color: $dark_bg;
+    }
+    &-header{
+        background-color: $dark_bg;
+        img{
+            width: 200px;
+        }
+    }
+}
+
