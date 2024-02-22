@@ -268,7 +268,7 @@
   background-position: center;
   background-size: cover;
   width: 100%;
-  height: 100vh;
+  height: 100%;
 }
 
 .conteiner-servicios {
@@ -373,9 +373,25 @@
 .nav-list-galery {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 300px);
+  grid-template-rows: repeat(3, 200px);
   gap: 10px;
   grid-template-areas: "a1 a2 a3 a3" "a4 a4 a5 a6" "a7 a8 a9 a9";
+}
+@media only screen and (max-width: 992px) {
+  .nav-list-galery {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 200px);
+    gap: 10px;
+    grid-template-areas: "a1 a2 a3" "a4 a5 a6" "a7 a8 a9";
+  }
+}
+@media only screen and (max-width: 768px) {
+  .nav-list-galery {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(auto, 200px);
+    gap: 10px;
+    grid-template-areas: "a1 a2" "a3 a4" "a5 a6" "a7 a8" "a9 a9";
+  }
 }
 
 .b1 {
@@ -416,19 +432,12 @@
 
 .box {
   width: 100%;
-  height: 300px;
-  font-size: 5rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10%;
+  height: 200px;
 }
-
-.box img {
+.box a img {
   width: 100%;
-  height: 300px;
+  height: 200px;
   object-fit: cover;
-  border-radius: 15px;
 }
 
 /*# sourceMappingURL=style.css.map */
