@@ -93,7 +93,7 @@
 .hero {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   padding-top: 1rem;
 }
 @media only screen and (max-width: 992px) {
@@ -104,25 +104,30 @@
     position: relative;
   }
 }
+@media only screen and (max-width: 576px) {
+  .hero {
+    overflow: hidden;
+  }
+}
 .hero-card {
   width: 30%;
   height: 600px;
   display: flex;
-  align-items: end;
-  justify-content: end;
+  align-items: center;
+  justify-content: flex-end;
   opacity: 0;
   animation: entradaAnimacion 2s ease-out forwards 0.5s;
 }
 @media only screen and (max-width: 992px) {
   .hero-card {
     width: 130%;
-    height: 400px;
+    height: 300px;
     position: absolute;
   }
 }
 @media only screen and (max-width: 576px) {
   .hero-card {
-    width: 120%;
+    width: 130%;
     height: 300px;
     align-self: top;
   }
@@ -163,6 +168,13 @@
     font-size: 2rem;
   }
 }
+@media only screen and (max-width: 576px) {
+  .hero-card-2 h1 {
+    font-size: 1.7rem;
+    letter-spacing: 0;
+    width: 60%;
+  }
+}
 .hero-card-2 .form-index {
   padding: 5%;
   backdrop-filter: blur(15px);
@@ -188,6 +200,7 @@
 @media only screen and (max-width: 992px) {
   .hero-card-2 .form-index .email-text {
     padding: 2%;
+    font-size: 1rem;
   }
 }
 .hero-card-2 .form-index input {
@@ -238,6 +251,11 @@
   background-color: rgba(255, 255, 255, 0.066);
   box-shadow: 0 0px 20px rgba(255, 255, 255, 0.149);
 }
+@media only screen and (max-width: 767px) {
+  .servicios-index-cards .card-serv {
+    width: 75%;
+  }
+}
 .servicios-index-cards .card-serv p {
   font-family: "Montserrat", sans-serif;
   color: white;
@@ -262,6 +280,11 @@
   border-radius: 7px;
   align-self: center;
 }
+@media only screen and (max-width: 767px) {
+  .servicios-index-cards .card-serv img {
+    height: 200px;
+  }
+}
 
 .article_main_serv {
   background-image: linear-gradient(0deg, rgb(15, 15, 17) 0%, rgb(15, 15, 17) 35%, rgba(15, 15, 17, 0.1349133403) 100%), url("../assets/images/index/bgindex.jpg");
@@ -275,7 +298,7 @@
   padding-top: 80px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 .conteiner-servicios .h1-servicios {
@@ -291,6 +314,12 @@
   font-size: 1rem;
   color: aliceblue;
   text-align: center;
+}
+@media only screen and (max-width: 576px) {
+  .conteiner-servicios .p-servicios {
+    font-size: 0.8rem;
+    width: 90%;
+  }
 }
 .conteiner-servicios .servicios-serv {
   display: flex;
@@ -356,10 +385,10 @@
 }
 
 .gallery {
-  display: flex;
+  /* display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1em;
+  gap: 1em; */
   width: 100%;
   height: 100%;
   padding: 1em;
@@ -367,7 +396,7 @@
   border-radius: 15px;
   backdrop-filter: blur(15px);
   background-color: rgba(255, 255, 255, 0.066);
-  box-shadow: 0 0px 20px rgba(255, 255, 255, 0.149);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.149);
 }
 
 .nav-list-galery {
@@ -431,6 +460,7 @@
 }
 
 .box {
+  overflow: hidden;
   width: 100%;
   height: 200px;
 }
@@ -438,12 +468,16 @@
   width: 100%;
   height: 200px;
   object-fit: cover;
+  transition: all 0.2s ease-in-out;
+}
+.box :hover img {
+  transform: scale(1.3) rotate(5deg);
 }
 
 .conteiner-servicios {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 0.5rem;
 }
 .conteiner-servicios .img-nos {
   width: 100%;
@@ -465,7 +499,7 @@
 .contact-hero {
   gap: 2em;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: start;
   align-items: center;
 }
 @media only screen and (max-width: 992px) {
@@ -474,7 +508,7 @@
   }
 }
 .contact-hero .contact-card {
-  width: 20%;
+  width: 45%;
   height: 500px;
   display: flex;
 }
@@ -483,18 +517,12 @@
     display: none;
   }
   .contact-hero .contact-card img {
-    height: 85%;
+    height: 100%;
   }
 }
 .contact-hero .contact-card .contact-card2 {
-  display: flex;
-  gap: 5em;
-  width: 75%;
+  width: 50%;
   height: 500px;
-}
-.contact-hero .contact-card .contact-card2 form {
-  width: 30px;
-  color: aliceblue;
 }
 .contact-hero .contact-card .contact-card2 iframe {
   border-radius: 20px;

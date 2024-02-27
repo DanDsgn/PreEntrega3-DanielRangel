@@ -32,7 +32,7 @@
         <div class="offcanvas-body">
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="../index.html">Inicio</a>
+              <a class="nav-link"  href="../index.html">Inicio</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="servicios.html">Servicios</a>
@@ -45,7 +45,7 @@
               <a class="nav-link" href="nosotros.html">Nosotros</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contacto.html">Contacto</a>
+              <a class="nav-link active" aria-current="page" href="contacto.html">Contacto</a>
             </li>
 
         </div>
@@ -63,7 +63,7 @@
         Experimente la comodidad de soluciones a medida. Estamos ansiosos por conectarnos con usted.
       </p>
 
-      <div class="contact-hero">
+      <div class="contact-hero container">
         <div class="contact-card">
           <img src="../assets/images/index/simio.png" alt="">
         </div>
@@ -74,21 +74,20 @@
             width="100%" style="border:0; " loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"></iframe>
 
-          <form class="row g-3 ">
+          <form data-bs-theme="dark">
             <div class="col-md-12">
               <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
             </div>
-            <div class="col-6">
+            <div class="col-12">
               <input type="text" class="form-control" id="inputAddress" placeholder="Nombre">
             </div>
-            <div class="col-6">
+            <div class="col-12">
               <input type="text" class="form-control" id="inputAddress2" placeholder="Apellido">
             </div>
             <div class="col-md-12">
-              <label for="inputCity" class="form-label">Ciudad</label>
-              <input type="text" class="form-control" id="inputCity">
+              <input type="text" class="form-control" id="inputCity" placeholder="Ciudad">
             </div>
-            <div class="col-md-4">
+            <div class="col-md-12">
               <label for="inputState" class="form-label">Estado</label>
               <select id="inputState" class="form-select">
                 <option selected>Elije...</option>
